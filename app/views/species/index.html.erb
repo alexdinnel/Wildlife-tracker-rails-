@@ -1,0 +1,11 @@
+<h1>Species</h1>
+
+<ul>
+  <% @species.each do |species| %>
+    <li><a href="/species/<%= species.id %>">
+      <%= species.name %>
+    </li>
+    <% end %>
+</ul>
+
+<a href="/species/new">New species</a>

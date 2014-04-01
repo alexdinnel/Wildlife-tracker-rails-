@@ -1,0 +1,18 @@
+<h1><%= @species.name %></h1>
+
+
+<p><a href="/species/<%= @species.id %>/edit">Edit</a></p>
+<p><a href="/species/<%= @species.id %>" data-confirm="You sure?"
+      data-method="delete"
+      rel="nofollow">Delete</a></p>
+<p><a href="/species">Return to species listing</a></p>
+
+<h2>Report sighting</h2>
+
+<form action="/sighting" method="post">
+  <lable for="sighting_date">Date</lable>
+  <input id="sighting_date" date="date" type="date">
+  <lable for="sighting_location">Location</lable>
+  <input id="sighting_location" location="location" type="location">
+<button>Report sightings</button>
+</form>
